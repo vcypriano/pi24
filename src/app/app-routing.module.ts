@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'apresentacao',
+    loadChildren: () => import('./apresentacao/apresentacao.module').then( m => m.ApresentacaoPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'tipo-gerador-energia',
+    loadChildren: () => import('./tipo-gerador-energia/tipo-gerador-energia.module').then( m => m.TipoGeradorEnergiaPageModule)
+  },
+  {
+    path: 'lista-plataforma',
+    loadChildren: () => import('./lista-plataforma/lista-plataforma.module').then( m => m.ListaPlataformaPageModule)
+  },
 ];
 
 @NgModule({
