@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-apresentacao',
   templateUrl: './apresentacao.page.html',
-  styleUrls: ['./apresentacao.page.scss'],
+  styleUrls: ['./apresentacao.page.scss'],  
 })
 export class ApresentacaoPage implements OnInit {
 

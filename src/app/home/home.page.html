@@ -1,20 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="light">
+    <ion-title class="main-title">
+      Ener Share
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="centered-title">
+    <h1>Ener Share</h1>
+    <p class="welcome-message">Bem-vindo ao nosso app! Selecione uma opção abaixo para começar.</p>
+  </div>
+
+
+  <div class="button-group">
+    <ion-button expand="block" color="success">Clima</ion-button>
+    <ion-button expand="block" color="success">Produção(kWm)</ion-button>
+    <ion-button expand="block" color="success">Consumo(kWm)</ion-button>
+    <ion-button expand="block" color="success">Ganhos</ion-button>
   </div>
 </ion-content>

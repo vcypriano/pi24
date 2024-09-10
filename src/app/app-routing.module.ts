@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'lista-plataforma',
     loadChildren: () => import('./lista-plataforma/lista-plataforma.module').then( m => m.ListaPlataformaPageModule)
   },
+  {
+    path: 'esqueci-minha-senha',
+    loadChildren: () => import('./esqueci-minha-senha/esqueci-minha-senha.module').then( m => m.EsqueciMinhaSenhaPageModule)
+  },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },
+  {
+    path: 'grafico-exemplo',
+    loadChildren: () => import('./grafico-exemplo/grafico-exemplo.module').then( m => m.GraficoExemploPageModule)
+  },
+  {
+    path: 'card-exemplo',
+    loadChildren: () => import('./card-exemplo/card-exemplo.module').then( m => m.CardExemploPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 ];
 
 @NgModule({
