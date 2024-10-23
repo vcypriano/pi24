@@ -1,40 +1,77 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <ion-button fill="solid" color="success" routerLink="/home">
+      <ion-icon name="caret-back-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-title>Produção de Energia</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
+      <ion-title size="large">Produção de Energia</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card color="secondary">
+  <!-- Botão Solicitar Energia -->
+  <div class="button-group">
+    <ion-button color="success" expand="block" fill="solid" class="square-button" routerLink="/solicitarenergia">
+      <ion-icon name="hand-left-outline" slot="icon-only"></ion-icon>
+      <div>Solicitar</div>
+    </ion-button>
+  </div>
+
+  <!-- Cards de Produção de Energia -->
+  <ion-card color="light">
     <ion-card-header>
-    <ion-icon name="podium-outline"></ion-icon>
-    <ion-card-subtitle>Casos Encotrados</ion-card-subtitle>
-  </ion-card-header>
+      <ion-icon name="battery-charging-outline" slot="start" color="primary"></ion-icon>
+      <ion-card-subtitle color="dark">Produção Hidrica</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="icon-card-value" style="color: #1976d2;">60 kW</h1>
+    </ion-card-content>
+  </ion-card>
 
-  <ion-card-content>
-    <h1 class="icon-card-value">20</h1>
-  </ion-card-content>
-</ion-card>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-icon name="sunny-outline" slot="start" color="warning"></ion-icon>
+      <ion-card-subtitle color="dark">Produção Solar</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>  
+      <h1 class="icon-card-value" style="color: #ffc107;">120 kW</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-icon name="battery-charging-outline" slot="start" color="primary"></ion-icon>
+      <ion-card-subtitle color="dark">Produção Geotermica</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="icon-card-value" style="color: #d23e19;">30 kW</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-icon name="battery-charging-outline" slot="start" color="primary"></ion-icon>
+      <ion-card-subtitle color="dark">Produção Biomassa</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="icon-card-value" style="color: #56bd11;">40 kW</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-icon name="cloud-outline" slot="start" color="secondary"></ion-icon>
+      <ion-card-subtitle color="dark">Produção Eólica</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="icon-card-value" style="color: #9c27b0;">80 kW</h1>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card color="success">
-<ion-card-header>
-  <ion-icon name="stats-chart-outline"></ion-icon>
-  <ion-card-subtitle>Itens Adicionados</ion-card-subtitle>
-</ion-card-header>
+  <!-- Gráficos de Produção -->
+  <p-chart type="pie" [data]="dataPie" style="margin-top: 20px;"></p-chart>
+  <p-chart type="bar" [data]="dataBar" style="margin-top: 20px;"></p-chart>
 
-<ion-card-content>
-  <h1 class="icon-card-value">03</h1>
-</ion-card-content>
-</ion-card>
-
-  <p-chart type="pie" [data]="data" />
-
-  <p-chart type="bar" [data]="data" />
-  
 </ion-content>

@@ -1,48 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Cadastro - EnerShare
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-title class="main-title">
+      Ener Share
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
 
 <ion-content class="ion-padding">
   <div class="container">
-    <h2>Cadastre-se na EnerShare</h2>
-    <form>
+    <h2>Cadastre-se na EnerShare <ion-icon name="leaf"></ion-icon></h2> 
+    
+
+  
       <ion-item>
         <ion-label position="floating">Nome completo</ion-label>
-        <ion-input type="text" name="nome" required></ion-input>
+        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" name="email" required></ion-input>
+        <ion-input type="email" name="email" id="email" [(ngModel)]="email" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Telefone</ion-label>
-        <ion-input type="tel" name="telefone"></ion-input>
+        <ion-input type="tel" name="telefone" id="telefone" [(ngModel)]="telefone" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Endereço</ion-label>
-        <ion-input type="text" name="endereco" required></ion-input>
+        <ion-input type="text" name="endereco" id="endereco" [(ngModel)]="endereco" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Cidade</ion-label>
-        <ion-input type="text" name="cidade" required></ion-input>
+        <ion-input type="text" name="cidade" id="cidade" [(ngModel)]="cidade" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Estado</ion-label>
-        <ion-input type="text" name="estado" required></ion-input>
+        <ion-input type="text" name="estado" id="estado" [(ngModel)]="estado" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Senha</ion-label>
-        <ion-input type="password" name="senha" required></ion-input>
+        <ion-input type="password" name="senha" id="senha" [(ngModel)]="senha" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Confirmar Senha</ion-label>
-        <ion-input type="password" name="confirmar-senha" required></ion-input>
+        <ion-input type="password" name="confirmarsenha" id="confirmarsenha"></ion-input> 
       </ion-item>
-      <ion-button expand="full" type="submit">Cadastrar</ion-button>
-    </form>
+      <ion-button expand="full" type="submit" color="sucess" routerLink="/home" (click)="salvar() ">Salvar</ion-button>
+      <ion-row class="ion-justify-content-center ion-margin-top">
+       <a routerLink="/login">Ja possui login?</a>
+      </ion-row>
   </div>
 </ion-content>

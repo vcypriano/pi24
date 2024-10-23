@@ -1,0 +1,53 @@
+/* Define o espaçamento geral para o conteúdo */
+.container {
+    padding: 20px;
+  }
+  
+  /* Estilo para o título do formulário */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+    color: #4a8d4d; /* Cor do texto do título */
+  }
+  
+  /* Alinha os itens do formulário */
+  ion-item {
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo para o botão Salvar */
+  ion-button {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    font-weight: bold; /* Texto em negrito */
+  }
+  
+  /* Efeitos de hover para o botão */
+  ion-button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+  }
+  
+  /* Estilo para os rótulos dos campos */
+  ion-label {
+    color: #666; /* Cor dos rótulos */
+  }
+  
+  /* Estilo para os campos de entrada de texto */
+  ion-input {
+    color: #ffffff; /* Cor do texto dentro dos campos */
+  }
+  
+  /* Adiciona um pouco de sombra ao fundo da página */
+  ion-content {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+
+  a {
+    color: #4caf50; /* Verde */
+    text-decoration: none;
+  }
+  

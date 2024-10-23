@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-title class="main-title">
+      Ener Share
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
+
+  <!-- Ícone de logo -->
+  <div class="logo-container ion-text-center">
+    <ion-icon name="leaf-outline" size="large" class="leaf-logo"></ion-icon>
+  </div>
+
+  <!-- Contêiner centralizado -->
+  <div class="login-wrapper">
+  
+    <ion-title class="title" text-center>Faça login</ion-title>
+
+    <!-- Campo de e-mail -->
+    <ion-item class="input-field">
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="email" required></ion-input>
+    </ion-item>
+
+    <!-- Campo de senha -->
+    <ion-item class="input-field">
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" name="senha" [(ngModel)]="senha" required></ion-input>
+    </ion-item>
+
+    <!-- Botão de login -->
+    <ion-button expand="block" color="success" routerLink="/home" (click)="autenticar()">Entrar</ion-button>
+
+    <!-- Mensagem de carregamento (Entrando...) -->
+    <div *ngIf="loading" class="loading-message ion-text-center ion-margin-top">
+      <ion-spinner name="crescent"></ion-spinner>
+      <p>Entrando...</p>
+    </div>
+
+    <!-- Link para recuperar senha -->
+    <ion-row class="ion-justify-content-center ion-margin-top">
+      <a routerLink="/esqueci-minha-senha">Esqueceu a senha?</a>
+    </ion-row>
+
+  </div>
+
+</ion-content>

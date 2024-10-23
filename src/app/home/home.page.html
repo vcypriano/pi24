@@ -3,21 +3,39 @@
     <ion-title class="main-title">
       Ener Share
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true" class="ion-padding">
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
 
   <div class="centered-title">
-    <h1>Ener Share</h1>
+    <h1><ion-icon name="leaf-outline"></ion-icon> Ener Share</h1>
     <p class="welcome-message">Bem-vindo ao nosso app! Selecione uma opção abaixo para começar.</p>
   </div>
 
 
   <div class="button-group">
-    <ion-button expand="block" color="success">Clima</ion-button>
-    <ion-button expand="block" color="success">Produção(kWm)</ion-button>
-    <ion-button expand="block" color="success">Consumo(kWm)</ion-button>
-    <ion-button expand="block" color="success">Ganhos</ion-button>
+    <ion-button color="sucess" expand="block" fill="solid" class="square-button" routerLink="/solicitarenergia">
+      <ion-icon name="hand-left-outline" slot="icon-only"></ion-icon>
+      <div>Solicitar Energia</div>
+    </ion-button>
+    
+    <ion-button color="sucess" expand="block" fill="solid" class="square-button" routerLink="/dashboard">
+      <ion-icon name="battery-charging-outline" slot="icon-only"></ion-icon>
+      <div>ProduçãokWm</div>
+    </ion-button>
+    
+    <ion-button color="sucess" expand="block" fill="solid" class="square-button" routerLink="/ganhos">
+      <ion-icon name="search" slot="icon-only"></ion-icon>
+      <div>Sua situação</div>
+    </ion-button>
+    
+    <ion-button color="sucess" expand="block" fill="solid" class="square-button" routerLink="/mapa-geral">
+      <ion-icon name="people-outline" slot="icon-only"></ion-icon>
+      <div>Ver comunidade</div>
+    </ion-button>
   </div>
 </ion-content>

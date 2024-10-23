@@ -17,14 +17,12 @@ public alertButtons:Array<any> = [];
     public Router:Router,
     private loadingCtrl: LoadingController ) 
   { }
-  public usuarios:Array<any> = [];
+  public plataformas:Array<any> = [];
   ngOnInit() {
     this. listar();
   }
 
   async listar(){
-
-
       
       const loading = await this.loadingCtrl.create({
         message: 'carregando ...'
@@ -32,14 +30,28 @@ public alertButtons:Array<any> = [];
     loading.present();
 
     this.requisicao_service.get({
-    controller:'usuario-listar'
+    controller:'plataforma-listar'
     })
     .subscribe(
     (_res:any) => {  
       loading.dismiss(); 
-    this.usuarios =_res;
+      this.plataformas =_res;
     }
     );
-  }  
+  } 
+
+  editar(id:number){
+    this.Router.navigateByUrl('plataforma/' + id);
+  }
+
+  excluir(id:number){
+    this.requisicao_service.get({
+      controller:'plataforma-excluir',
+      id:id
+    })
+    .subscribe( () => {
+      this.listar();
+    } );
+  }
 
 }

@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-button fill="solid" color="success" class="square-button" routerLink="/home">
+      <ion-icon name="caret-back-outline" slot="icon-only"></ion-icon>
+      <div></div>
+    </ion-button>
+    <ion-title>Solicitar Energia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Card para Endereço de Entrega -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Endereço de Entrega</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Campo Destinatário -->
+      <ion-item>
+        <ion-label position="floating">Destinatário</ion-label>
+        <ion-input type="text" placeholder="Nome do Destinatário" [(ngModel)]="destinatario"></ion-input>
+      </ion-item>
+
+      <!-- Campo Estado -->
+      <ion-item>
+        <ion-label position="floating">Estado</ion-label>
+        <ion-input type="text" placeholder="Digite o Estado" [(ngModel)]="estado"></ion-input>
+      </ion-item>
+
+      <!-- Campo Cidade -->
+      <ion-item>
+        <ion-label position="floating">Cidade</ion-label>
+        <ion-input type="text" placeholder="Digite sua cidade" [(ngModel)]="cidade"></ion-input>
+      </ion-item>
+
+      <!-- Campo Rua -->
+      <ion-item>
+        <ion-label position="floating">Rua</ion-label>
+        <ion-input type="text" placeholder="Digite sua rua" [(ngModel)]="rua"></ion-input>
+      </ion-item>
+
+      <!-- Campo Número -->
+      <ion-item>
+        <ion-label position="floating">Número</ion-label>
+        <ion-input type="text" placeholder="Digite o número" [(ngModel)]="numero"></ion-input>
+      </ion-item>
+
+      <!-- Campo Bairro -->
+      <ion-item>
+        <ion-label position="floating">Bairro</ion-label>
+        <ion-input type="text" placeholder="Digite o bairro" [(ngModel)]="bairro"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Card para Seleção de Tipo de Energia -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Selecione o Tipo de Energia</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group [(ngModel)]="tipoEnergia">
+          <ion-item>
+            <ion-label>Solar</ion-label>
+            <ion-radio slot="start" value="solar"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Eólica</ion-label>
+            <ion-radio slot="start" value="eolica"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Hidrelétrica</ion-label>
+            <ion-radio slot="start" value="hidreletrica"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Biomassa</ion-label>
+            <ion-radio slot="start" value="biomassa"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Geotérmica</ion-label>
+            <ion-radio slot="start" value="geotermica"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botão para Solicitar Energia -->
+  <ion-button expand="block" color="success" id="solicitar-btn" (click)="salvar()">Solicitar Energia</ion-button>
+</ion-content>

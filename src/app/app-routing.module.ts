@@ -47,6 +47,47 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  
+  {
+    path: 'ganhos',
+    loadChildren: () => import('./ganhos/ganhos.module').then( m => m.GanhosPageModule)
+  },
+  {
+    path: 'mapa-geral',
+    loadChildren: () => import('./mapa-geral/mapa-geral.module').then( m => m.MapaGeralPageModule)
+  },
+  {
+    path: 'solicitarenergia',
+    loadChildren: () => import('./solicitarenergia/solicitarenergia.module').then( m => m.SolicitarenergiaPageModule)
+  },
+  {
+    path: 'plataforma',
+    loadChildren: () => import('./plataforma/plataforma.module').then( m => m.PlataformaPageModule)
+  },
+  {
+    path: 'plataforma/:id',
+    loadChildren: () => import('./plataforma/plataforma.module').then( m => m.PlataformaPageModule)
+  },   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'termosdeuso',
+    loadChildren: () => import('./termosdeuso/termosdeuso.module').then( m => m.TermosdeusoPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'pedido',
+    loadChildren: () => import('./pedido/pedido.module').then( m => m.PedidoPageModule)
+  },
+ 
 ];
 
 @NgModule({

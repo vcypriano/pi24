@@ -1,0 +1,32 @@
+/* Estilos para o mapa ocupar a tela inteira */
+#map {
+  height: 100vh;  /* O mapa vai ocupar 100% da altura da viewport */
+  width: 100vw;   /* O mapa vai ocupar 100% da largura da viewport */
+  position: absolute;  /* Mapa posicionado de forma absoluta */
+  top: 0;
+  left: 0;
+  z-index: 1;  /* Certificar que o mapa fica abaixo do header */
+}
+
+iframe {
+  width: 100%;  /* Deixar o iframe responsivo */
+  height: 50vh; /* Ajustar o iframe para metade da altura da tela */
+  border: none; /* Remover bordas do iframe */
+  z-index: 2;   /* Certificar que o iframe fica acima do mapa */
+}
+
+/* O ion-content deve ter um background transparente */
+ion-content {
+  --background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+ion-header {
+  z-index: 2; /* Certificar que o cabeçalho fica sobre o mapa */
+  position: relative; /* Garantir que o header não seja afetado pelo mapa */
+}

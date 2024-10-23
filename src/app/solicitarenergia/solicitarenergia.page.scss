@@ -1,0 +1,122 @@
+/* Estilo do ion-header */
+ion-header {
+  --background: #4CAF50; /* Cor relacionada à sustentabilidade e energia renovável */
+  color: white; /* Cor do texto no header */
+}
+
+/* Estilo do ion-title no header */
+ion-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo do ion-card */
+ion-card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #464646; /* Fundo leve e suave */
+}
+
+/* Estilo do ion-card-header */
+ion-card-header {
+  background-color: #555555;
+  border-bottom: 2px solid #4CAF50; /* Borda inferior com a cor do tema */
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo do ion-card-title */
+ion-card-title {
+  font-size: 1.2rem;
+  color: #4CAF50; /* Cor do título relacionada à energia renovável */
+}
+
+/* Estilo dos ion-item e dos rótulos de energia */
+ion-item {
+  --background: transparent;
+  --border-color: #4CAF50;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Estilo dos ion-label */
+ion-label {
+  font-weight: bold;
+  color: white
+}
+
+/* Estilo do ion-radio */
+ion-radio {
+  --color-checked: #4CAF50; /* Verde relacionado ao tema de energia renovável */
+}
+
+/* Estilo do ion-button */
+#solicitar-btn {
+  --background: #4CAF50; /* Cor do botão */
+  --color: white; /* Texto branco no botão */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#solicitar-btn:hover {
+  --background: #45a045; /* Efeito de hover mais escuro */
+}
+
+/* Padding do conteúdo para manter espaçamento agradável */
+ion-content {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+/* Ajuste no alinhamento dos itens da lista */
+ion-list {
+  margin-top: 10px;
+}
+
+/* Efeito para o ion-card quando pressionado */
+ion-card:active {
+  box-shadow: none;
+}
+
+/* Remover as bordas dos ion-item */
+ion-item {
+  --inner-border-width: 0px;  /* Remover borda interna */
+  --border-color: transparent;  /* Garantir que a cor da borda seja transparente */
+  --background: transparent;  /* Deixar o fundo transparente para um visual mais clean */
+}
+
+/* Ajuste do espaçamento entre os itens para manter legibilidade */
+ion-list ion-item {
+  margin-bottom: 10px;  /* Adiciona espaçamento entre os itens */
+}
+
+/* Estilo geral para os ion-label e ion-radio */
+ion-label {
+  font-weight: bold;
+  color: #333;  /* Cor do texto */
+}
+
+ion-radio {
+  --color-checked: #4CAF50;  /* Mantendo a cor verde para o radio selecionado */
+}
+
+/* Estilo do botão */
+#solicitar-btn {
+  --background: #4CAF50;  /* Verde relacionado ao tema de energia renovável */
+  --color: white;  /* Texto branco */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#solicitar-btn:hover {
+  --background: #45a045;  /* Hover mais escuro */
+}
+

@@ -1,0 +1,67 @@
+/* Estilo geral do conteúdo */
+ion-content {
+    background-color: #f9f9f9;  /* Fundo muito claro para um visual leve */
+    padding: 20px;  /* Padding ao redor do conteúdo */
+    padding-left: 16px;  /* Padding à esquerda */
+    padding-right: 16px;  /* Padding à direita */
+  }
+  
+  /* Estilo do ion-title */
+  ion-title {
+    font-size: 2rem;  /* Tamanho do título */
+    font-weight: bold;  /* Negrito para destaque */
+    text-align: center;  /* Centraliza o título */
+    color: #547a4f;  /* Cor do título em cinza escuro */
+  }
+  
+  /* Estilo do ion-label */
+  ion-label {
+    font-size: 1rem;  /* Tamanho do texto da label */
+    color: #555;  /* Cor do texto da label em cinza */
+    margin-bottom: 5px;  /* Espaço abaixo da label */
+    display: block;  /* Exibe como bloco para garantir que esteja alinhado */
+  }
+  
+  /* Estilo do ion-input */
+  ion-input {
+    background-color: #ffffff;  /* Fundo branco para o input */
+    border: 1px solid #ccc;  /* Borda cinza clara */
+    border-radius: 5px;  /* Bordas arredondadas */
+    margin-bottom: 20px;  /* Espaço abaixo do input */
+    padding: 10px;  /* Padding interno */
+    color: #000;  /* Cor do texto dentro do input */
+    width: 80%;
+    left: 5%;
+  }
+  
+  /* Estilo do ion-button */
+  ion-button {
+    color: white;  /* Cor do texto do botão */
+    font-size: 1rem;  /* Tamanho do texto no botão */
+    width: 40%;  /* Botão ocupa toda a largura disponível */
+    border-radius: 5px;  /* Bordas arredondadas */
+    padding: 12px;  /* Padding interno */
+    transition: background-color 0.3s ease;  /* Transição suave */
+    margin-top: 20px;  /* Espaço acima do botão */
+    
+  }
+  
+  /* Efeito de hover no botão */
+  ion-button:hover {
+    background-color: #45a049;  /* Cor mais escura ao passar o mouse */
+  }
+  
+  /* Estilo adicional para espaçamento */
+  .container {
+    margin-top: 20px;  /* Margem superior para espaçamento */
+  }
+  
+  /* Alinhamento centralizado para o conteúdo */
+  .container h1, .container p {
+    text-align: center;  /* Centraliza o texto do título e parágrafo */
+    margin: 10px 0;  /* Margem vertical para espaçamento */
+  }
+  ion-header {
+    box-shadow: none; /* Remove a sombra padrão do cabeçalho */
+    border-bottom: none; /* Remove a borda inferior do cabeçalho */
+  }

@@ -1,36 +1,132 @@
+/* Estilos para o título da página */
+.main-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #388e3c; /* Verde escuro */
+  text-align: center;
+}
+
+/* Centralizar o conteúdo da mensagem de boas-vindas */
 .centered-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  margin-top: 40px;
+}
+
+/* Estilo do título principal */
+.centered-title h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #1b5e20; /* Verde escuro */
+  margin-bottom: 10px;
+}
+
+/* Mensagem de boas-vindas */
+.welcome-message {
+  font-size: 1.2rem;
+  color: #757575; /* Cinza suave */
   text-align: center;
-  color: #2e7d32; 
-  background-color: #f5f5f5; 
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 85%;
+}
+
+/* Estilos para o grupo de botões */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo dos botões */
+.square-button {
+  --border-radius: 15px; /* Borda arredondada */
+  --background: #388e3c; /* Verde escuro */
+  --color: white; /* Texto branco */
+  width: 90%; /* Largura dos botões */
+  padding: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste para ícone dentro do botão */
+.square-button ion-icon {
+  font-size: 1.8rem;
+  margin-right: 10px; /* Espaçamento entre ícone e texto */
+}
+
+/* Efeito de hover para os botões */
+.square-button:hover {
+  --background: #66bb6a; /* Cor verde claro no hover */
+}
+
+/* Tamanho e espaçamento entre os ícones e textos */
+.square-button div {
+  font-weight: 600; /* Texto em negrito */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .square-button {
+    font-size: 1rem; /* Ajuste do tamanho do texto para telas menores */
+    padding: 12px;
+  }
+}
+
+/* Centraliza o conteúdo do título */
+.centered-title {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .centered-title h1 {
-  font-size: 2.5rem;
-  margin: 0;
+  font-size: 2.5em;
+  color: #28a745;
 }
 
-.welcome-message {
-  font-size: 1.2rem;
+.centered-title .welcome-message {
+  font-size: 1.2em;
+  color: #666;
   margin-top: 10px;
-  color: #388E3C; 
 }
 
+/* Estiliza os botões */
 .button-group {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  padding: 20px;
+  margin-top: 40px;
 }
 
-.button-group ion-button {
-  width: calc(50% - 20px); 
+.square-button {
+  width: 90%; /* Define o tamanho do botão */
+  height: 150px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em; /* Tamanho do texto */
+  border-radius: 10px; /* Bordas arredondadas */
+  background: linear-gradient(135deg, #28a745, #71dd8a);/* Gradiente */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+}
+
+/* Estilização para o ícone dentro do botão */
+.square-button ion-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Efeito hover para o botão */
+.square-button:hover {
+  background: linear-gradient(135deg, #218838, #68cf7e);
+  transform: translateY(-3px); /* Efeito de leve subida */
+  transition: 0.3s ease-in-out; /* Transição suave */
 }

@@ -1,0 +1,62 @@
+.icon-card-value {
+    font-size: 3em; 
+    text-align: center; 
+    margin: 0;
+  }
+  
+  ion-card-header {
+    display: flex; /* Exibe conteúdo do cabeçalho em flex */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+  
+  ion-card-header ion-icon {
+    font-size: 30px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaçamento entre ícone e subtítulo */
+  }
+  ion-card {
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .icon-card-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  
+  .square-button {
+    width: 90%; /* Define o tamanho do botão */
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em; /* Tamanho do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    background: linear-gradient(135deg, #28a745, #71dd8a);/* Gradiente */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+  }
+  
+  /* Estilização para o ícone dentro do botão */
+  .square-button ion-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Efeito hover para o botão */
+  .square-button:hover {
+    background: linear-gradient(135deg, #218838, #68cf7e);
+    transform: translateY(-3px); /* Efeito de leve subida */
+    transition: 0.3s ease-in-out; /* Transição suave */
+  }
+  

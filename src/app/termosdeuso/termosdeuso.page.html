@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-title class="main-title">
+      Ener Share
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h2>Termos de Uso do App de Compartilhamento de Energia</h2>
+
+      <p>
+        Bem-vindo ao nosso aplicativo de compartilhamento de energia. Ao usar nossa plataforma, você concorda com os seguintes termos e condições.
+      </p>
+
+      <h3>1. Uso da Plataforma</h3>
+      <p>
+        Este aplicativo permite que usuários compartilhem, vendam e comprem energia renovável entre si. Você concorda em usar o aplicativo exclusivamente para esses fins e em conformidade com as leis locais de energia.
+      </p>
+
+      <h3>2. Responsabilidades dos Usuários</h3>
+      <p>
+        Os usuários são responsáveis por garantir que sua infraestrutura de energia esteja em conformidade com os regulamentos locais e que possuem as autorizações necessárias para compartilhar energia. Qualquer responsabilidade por falhas ou acidentes será do usuário que forneceu ou recebeu a energia.
+      </p>
+
+      <h3>3. Limitações e Garantias</h3>
+      <p>
+        A plataforma não se responsabiliza pela qualidade ou quantidade de energia compartilhada. Os usuários devem verificar a idoneidade dos outros participantes antes de realizar qualquer transação de energia.
+      </p>
+
+      <h3>4. Cancelamento de Contas</h3>
+      <p>
+        A plataforma se reserva o direito de cancelar ou suspender contas de usuários que violarem os termos de uso ou as leis aplicáveis.
+      </p>
+
+      <h3>5. Atualizações dos Termos</h3>
+      <p>
+        Estes termos podem ser atualizados periodicamente. É responsabilidade do usuário verificar eventuais mudanças nos termos de uso.
+      </p>
+
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Eu concordo com os Termos de Uso</ion-label>
+      </ion-item>
+
+      <ion-button expand="full" color="success" routerLink="/home">Aceitar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

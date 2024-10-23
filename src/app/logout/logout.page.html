@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-title class="main-title">
+      Ener Share
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<app-menu content-id="home-content"></app-menu>
+<ion-content [fullscreen]="true" id="home-content">
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h2>Tem certeza que deseja sair?</h2>
+      <p>Você será desconectado da sua conta.</p>
+
+      <ion-button expand="block" color="danger" (click)="logout()">Confirmar Logout</ion-button>
+      <ion-button expand="block" color="medium" (click)="cancel()">Cancelar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

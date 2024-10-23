@@ -1,0 +1,19 @@
+<ion-menu [contentId]="content_id">
+<ion-header >
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+ <ion-list>
+  <ion-item (click)="go('/home')"><ion-icon name="home-outline"></ion-icon> Home</ion-item>
+  <ion-item (click)="go('/lista-plataforma')"><ion-icon name="send-outline"></ion-icon> Compartilhamento</ion-item>
+  <ion-item (click)="go('/configuracoes')"><ion-icon name="cog-outline"></ion-icon> Configuracoes</ion-item>
+  <ion-item (click)="go('/cadastro')"><ion-icon name="share-outline"></ion-icon> Cadastro</ion-item>
+  <ion-item (click)="go('/apresentacao')"><ion-icon name="information-circle-outline"></ion-icon> Sobre nós</ion-item>
+  <ion-item (click)="go('/login')"><ion-icon name="person"></ion-icon> Login</ion-item>
+  <ion-item (click)="go('/termosdeuso')"><ion-icon name="people"></ion-icon> Termos de uso</ion-item>
+  <ion-item (click)="go('/logout')"><ion-icon name="log-in-outline"></ion-icon> logout</ion-item>
+ </ion-list>
+</ion-content>
+</ion-menu>

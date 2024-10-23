@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>Ener Share</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- Mensagem principal -->
+  <div class="success-message-container ion-text-center">
+    <ion-icon name="checkmark-circle-outline" class="success-icon"></ion-icon>
+    <h1>Sua energia foi solicitada!</h1>
+    <p>Sua solicitação está em tempo de espera. Assim que estiver pronta, enviaremos um SMS para você!</p>
+  </div>
+
+  <!-- Botão de voltar -->
+  <div class="button-container ion-text-center">
+    <ion-button fill="solid" color="success" expand="block" routerLink="/home">
+      Voltar
+    </ion-button>
+  </div>
+
+  <div class="solicitar-list-container">
+    <div class="solicitar-grid">
+      <ion-card *ngFor="let solicitar of solicitacoes" class="solicitar-card">
+        <ion-card-content>
+          <h2><b>Pedido</b></h2>
+          <p><strong>Destinatario:</strong> {{ solicitar.destinatario }}</p>
+          <p><strong>Tipo Energia:</strong> {{ solicitar.tipoEnergia }}</p>
+          <p><strong>Cidade:</strong> {{ solicitar.cidade }}</p>
+          <p><strong>Bairro:</strong> {{ solicitar.bairro }}</p>
+          <p><strong>Rua:</strong> {{ solicitar.rua }}</p>
+          <ion-button fill="clear" color="danger" (click)="excluir(solicitar.id)">
+            <ion-icon slot="start" name="cancel-circle"></ion-icon>
+            Cancelar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div> <!-- Adicionado para fechar o div solicitar-list-container -->
+
+</ion-content>

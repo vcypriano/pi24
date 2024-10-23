@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button fill="solid" color="success" class="square-button" routerLink="/home">
+      <ion-icon name="caret-back-outline" slot="icon-only" ></ion-icon>
+      <div></div>
+    </ion-button>
+    <ion-title>Nossa comunidade</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="map" style="height: 100%;"></div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28003.842128509463!2d-49.3780992!3d-28.675276800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1727205728501!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+</ion-content>
+
+<!-- Incluindo a biblioteca Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Inicializando o mapa
+  document.addEventListener('DOMContentLoaded', function() {
+    const map = L.map('map').setView([-23.55052, -46.633308], 12); // Coordenadas para São Paulo
+
+    // Adicionando a camada de tiles (mapa base)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Adicionando marcadores
+    const locations = [
+      { lat: -23.55052, lng: -46.633308, name: 'Pessoa 1' },
+      { lat: -23.559616, lng: -46.658164, name: 'Pessoa 2' },
+      { lat: -23.566093, lng: -46.644895, name: 'Pessoa 3' }
+    ];
+
+    locations.forEach(location => {
+      L.marker([location.lat, location.lng]).addTo(map)
+        .bindPopup(location.name);
+    });
+  });
+</script>
