@@ -29,6 +29,6 @@ export class LogoutPage implements OnInit {
 
   cancel() {
     // Se o usuário cancelar, redireciona para a página principal ou anterior
-    this.router.navigate(['/home']);
+    location.href = '/home';
   }
 }

@@ -1,20 +1,25 @@
 <div class="container">
-  <ion-button fill="solid" color="success" class="square-button" routerLink="/home">
+  <!-- Botão de retorno -->
+  <ion-button fill="solid" color="success" class="square-button" (click)="go('/home')">
     <ion-icon name="caret-back-outline" slot="icon-only"></ion-icon>
   </ion-button>
-  
+
   <!-- Título e mensagem -->
-  <h1>Esqueci a Senha</h1>
-  <p>Digite o seu e-mail para receber instruções sobre como redefinir sua senha.</p>
-  
+  <h1 class="title">Esqueci a Senha</h1>
+  <p class="description">
+    Digite o seu e-mail para receber instruções sobre como redefinir sua senha.
+  </p>
+
   <!-- Formulário de email -->
-  <form action="#">
-    <ion-item>
+  <form action="#" class="form">
+    <ion-item lines="none" class="email-item">
       <ion-label position="floating">E-mail</ion-label>
       <ion-input type="email" name="email" required></ion-input>
     </ion-item>
 
     <!-- Botão de enviar -->
-    <ion-button expand="block" type="submit" color="success">Enviar</ion-button>
+    <ion-button expand="block" type="submit" color="success" class="submit-button">
+      Enviar
+    </ion-button>
   </form>
 </div>

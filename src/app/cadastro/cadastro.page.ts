@@ -51,6 +51,10 @@ export class CadastroPage implements OnInit {
     );
    }
 
+   go(rota:string){
+    window.location.href = rota;
+  }
+  
   salvar() {
     //if (this.senha !== this.confirmarsenha) {
     //  console.error('As senhas não batem');

@@ -91,5 +91,8 @@ export class LoginPage implements OnInit{
       alert('Login realizado com sucesso!');
     }, 2000);
   }
+  go(rota: string) {
+    window.location.href = rota;
+  }
 }
 

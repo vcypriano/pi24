@@ -34,7 +34,7 @@
     </ion-item>
 
     <!-- Botão de login -->
-    <ion-button expand="block" color="success" routerLink="/home" (click)="autenticar()">Entrar</ion-button>
+    <ion-button expand="block" color="success" routerLink="/home" (click)="go('/home') " (click)="autenticar()">Entrar</ion-button>
 
     <!-- Mensagem de carregamento (Entrando...) -->
     <div *ngIf="loading" class="loading-message ion-text-center ion-margin-top">
@@ -44,7 +44,7 @@
 
     <!-- Link para recuperar senha -->
     <ion-row class="ion-justify-content-center ion-margin-top">
-      <a routerLink="/esqueci-minha-senha">Esqueceu a senha?</a>
+      <a (click)="go('/esqueci-minha-senha')">Esqueceu a senha?</a>
     </ion-row>
 
   </div>

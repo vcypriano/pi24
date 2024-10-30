@@ -49,9 +49,9 @@
         <ion-label position="floating">Confirmar Senha</ion-label>
         <ion-input type="password" name="confirmarsenha" id="confirmarsenha"></ion-input> 
       </ion-item>
-      <ion-button expand="full" type="submit" color="sucess" routerLink="/home" (click)="salvar() ">Salvar</ion-button>
+      <ion-button expand="full" type="submit" color="sucess" routerLink="/home" (click)="go('/home') ">Salvar</ion-button>
       <ion-row class="ion-justify-content-center ion-margin-top">
-       <a routerLink="/login">Ja possui login?</a>
+       <a (click)="go('/login')">Ja possui login?</a>
       </ion-row>
   </div>
 </ion-content>

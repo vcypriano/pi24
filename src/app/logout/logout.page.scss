@@ -1,0 +1,54 @@
+.logout-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Altura total da tela */
+    background-color: #f8f8f8; /* Fundo leve para destaque */
+  }
+  
+  .logout-card {
+margin: center;
+  }
+  
+  .logout-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logout-icon {
+    font-size: 80px;
+    color: #ff4d4f; /* Cor vermelha */
+    margin-bottom: 20px;
+  }
+  
+  .logout-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4f; /* Cor vermelha */
+    margin-bottom: 10px;
+  }
+  
+  .logout-text {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .logout-button {
+    background-color: #ff4d4f; /* Cor vermelha */
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+    margin: auto;
+  }
+  
+  .cancel-button {
+    margin-top: 10px;
+    margin: auto;
+  }
+  
+  .confirmar-div{
+    width: 70%;
+    margin: auto;
+  }

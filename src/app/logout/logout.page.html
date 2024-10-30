@@ -1,23 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="light">
-    <ion-title class="main-title">
-      Ener Share
-    </ion-title>
+    <ion-title class="main-title">Ener Share</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<app-menu content-id="home-content"></app-menu>
-<ion-content [fullscreen]="true" id="home-content">
-<ion-content>
-  <ion-card>
-    <ion-card-content>
-      <h2>Tem certeza que deseja sair?</h2>
-      <p>Você será desconectado da sua conta.</p>
 
-      <ion-button expand="block" color="danger" (click)="logout()">Confirmar Logout</ion-button>
-      <ion-button expand="block" color="medium" (click)="cancel()">Cancelar</ion-button>
-    </ion-card-content>
-  </ion-card>
+<app-menu content-id="home-content"></app-menu>
+
+<ion-content [fullscreen]="true" id="home-content" class="logout-content">
+  <div class="logout-card">
+    <!-- Ícone grande de sair -->
+    <ion-icon name="exit-outline" class="logout-icon"></ion-icon>
+    <h2 class="logout-title">Tem certeza que deseja sair?</h2>
+    <p class="logout-text">Você será desconectado da sua conta.</p>
+
+    <!-- Botões de confirmação e cancelamento -->
+    <div class="confirmar-div">
+      <ion-button color="danger" size="large" expand="full" (click)="logout()" class="logout-button">
+        Confirmar
+      </ion-button>
+      <br>
+      <br>
+
+      <ion-button color="medium" size="large" expand="full" (click)="cancel()" class="cancel-button">
+        Cancelar
+      </ion-button>
+    </div>
+  </div>
 </ion-content>
