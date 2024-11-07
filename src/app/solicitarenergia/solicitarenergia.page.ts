@@ -17,6 +17,8 @@ export class SolicitarenergiaPage implements OnInit {
   public cidade: string = '';
   public rua: string = '';
   public bairro: string = '';
+  public quantidade: string = '';
+
 
   // Campo para Tipo de Energia
   public tipoEnergia: string = '';
@@ -40,6 +42,7 @@ export class SolicitarenergiaPage implements OnInit {
             this.destinatario = _dados.nome; // Substituí "nome" por "destinatario"
             this.numero = _dados.numero;
             this.estado = _dados.estado;
+            this.quantidade = _dados.quantidade;
             this.cidade = _dados.cidade;
             this.rua = _dados.rua;
             this.bairro = _dados.bairro;
@@ -58,6 +61,7 @@ export class SolicitarenergiaPage implements OnInit {
       !this.numero ||
       !this.estado ||
       !this.cidade ||
+      !this.quantidade ||
       !this.bairro ||
       !this.rua ||
       !this.tipoEnergia // Verifica se o tipo de energia foi selecionado
@@ -77,6 +81,7 @@ export class SolicitarenergiaPage implements OnInit {
     fd.append('estado', this.estado);
     fd.append('cidade', this.cidade);
     fd.append('rua', this.rua);
+    fd.append('quantidade', this.quantidade);
     fd.append('bairro', this.bairro);
     fd.append('tipoEnergia', this.tipoEnergia); // Novo campo adicionado
 

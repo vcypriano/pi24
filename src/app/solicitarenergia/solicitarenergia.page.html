@@ -87,11 +87,25 @@
             <ion-label>Geotérmica</ion-label>
             <ion-radio slot="start" value="geotermica"></ion-radio>
           </ion-item>
+        
         </ion-radio-group>
       </ion-list>
     </ion-card-content>
   </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Quantidade por kW</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content>
+      <!-- Campo do tanto de energia -->
+      <ion-item>
+        <ion-label position="floating">Digite a quantidade de energia a ser solicitada</ion-label>
+        <ion-input type="number" placeholder="Quantidade KW" [(ngModel)]="quantidade"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
   <!-- Botão para Solicitar Energia -->
   <ion-button expand="block" color="success" id="solicitar-btn" (click)="salvar()">Solicitar Energia</ion-button>
 </ion-content>
